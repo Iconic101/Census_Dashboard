@@ -34,7 +34,7 @@ jobs:
       # Export the Shiny app to a static site folder (site/)
       - name: Export Shinylive site
         run: |
-          shinylive export . site --no-edit
+          shinylive export . site
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
