@@ -3,8 +3,7 @@ import io
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.figure import Figure
-import seaborn as sns 
+from matplotlib.figure import Figure 
 import os
 
 ui.input_slider("n", "N", 0, 100, 20)
