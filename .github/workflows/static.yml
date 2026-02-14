@@ -30,9 +30,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install shinylive
+      - name: Remove runtime requirements for Shinylive
+        run: rm -f requirements.txt
 
       # Export the Shiny app to a static site folder (site/)
       - name: Export Shinylive site
+      
         run: |
           shinylive export . site
 
