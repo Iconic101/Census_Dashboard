@@ -5,6 +5,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure 
 import os
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+CSV_PATH = HERE / "census_acs5_all_states_2009_2023.csv"
+
+
+
+
 
 ui.input_slider("n", "N", 0, 100, 20)
 
@@ -41,7 +49,7 @@ RACE_LABELS = {
 def load_and_prepare_data(file_path):
     """Load and prepare the census data."""
     try:
-        df = pd.read_csv(file_path)
+        df = pd.read_csv(str(file_path))
         
         # Rename columns
         numeric_cols = [POPULATION_COL] + RACE_COLS
@@ -54,7 +62,7 @@ def load_and_prepare_data(file_path):
 
 # Load the dataset
 try:
-    df = load_and_prepare_data("census_acs5_all_states_2009_2023.csv")
+    df = load_and_prepare_data(CSV_PATH)
 except Exception as e:
     print(f"Error: {e}")
     df = pd.DataFrame()
