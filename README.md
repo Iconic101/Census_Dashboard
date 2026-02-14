@@ -1,1 +1,1 @@
-https://census-dashboard-3102a5a2e14b.herokuapp.com/
+access dashboard at https://iconic101.github.io/Census_Dashboard/
